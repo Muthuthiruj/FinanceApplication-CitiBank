@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_blue">#EAEEFC</color>
+    <color name="blue">#4272F4</color>
+    <color name="darkblue">#37449E</color>
+    <color name="grey">#8E8E8E</color>
+    <color name="lightGrey">#DEDEDE</color>          <!-- This has invalid characters 'U' and 'B' -->
+    <color name="brink">#DBB7F1</color>             <!-- This has wrong format (7 digits instead of 8) -->
+
+    <color name="trs1">#80000000</color>
+    <color name="trs2">	#66000000</color>
+    <color name="trs3">#80FFFFFF</color>
+    <color name="trs4">#BFFFFFFF</color>
+    <color name="trs2_light_10">#1A000000</color> <!-- 10% black (very faint) -->
+    <color name="trs2_light_20">#33000000</color> <!-- 20% black (subtle) -->
+    <color name="trs2_light_25">#40000000</color> <!-- 25% black -->
+    <!-- Lighter colors with same 40% opacity -->
+    <color name="trs2_gray">#66666666</color> <!-- 40% medium gray -->
+    <color name="trs2_light_gray">#66AAAAAA</color> <!-- 40% light gray -->
+    <color name="trs2_very_light">#66CCCCCC</color> <!-- 40% very light gray -->
+    <color name="trs2_white">#66FFFFFF</color> <!-- 40% white -->
+
+    <color name="safety_premium">#FFD700</color>
+    <color name="yellow">#ffe526</color>
+
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#EEEEEE</color>
+    <color name="gray_601">#E2E2E2</color>
+    <color name="gray_800">#F0F0F0</color>
+    <color name="gray_900">#F8F8F8</color>
+    <color name="gray_700">#616161</color>
+    <color name="saffron">#FF9933</color> <!-- Red -->
+    <color name="gray_600_11">#757575</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_400">#BDBDBD</color>
+
+    <color name="gray">#757575</color>
+
+    <color name="shadow_grey">#6C757D</color>
+    <color name="ic_bg">#D4D4D4</color>
+    <color name="shadow_dark_grey">#ABB0B3</color>
+
+    <!-- ===== CitiBank design tokens (light) ===== -->
+    <color name="primary">#1D5BFF</color>
+    <color name="navy">#0B2A6B</color>
+    <color name="navy_deep">#071B47</color>
+    <color name="accent_red">#E4002B</color>
+    <color name="background">#F4F7FC</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text_primary">#0F1B3D</color>
+    <color name="text_secondary">#6B7690</color>
+    <color name="divider">#E3E9F5</color>
+    <color name="input_bg">#F7F9FD</color>
+    <color name="chip_bg">#EAF0FF</color>
+    <color name="success">#1FA463</color>
+    <color name="warning">#F5A524</color>
+    <color name="error">#D92D20</color>
+    <color name="on_navy">#FFFFFF</color>
+    <color name="on_navy_muted">#B6C3E4</color>
+</resources>

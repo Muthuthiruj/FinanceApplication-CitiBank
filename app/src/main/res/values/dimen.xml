@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="onboarding_view_height">650dp</dimen>
+    <dimen name="onboarding_content_height">300dp</dimen>
+</resources>

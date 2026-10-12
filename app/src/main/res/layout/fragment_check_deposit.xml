@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background" android:orientation="vertical">
+
+    <include android:id="@+id/toolbar" layout="@layout/view_toolbar" />
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+            <TextView style="@style/App.Text.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Front of Check" />
+                <FrameLayout android:id="@+id/boxFront" android:layout_width="match_parent" android:layout_height="140dp"
+                    android:layout_marginTop="8dp" android:background="@drawable/bg_upload_box" android:clickable="true" android:focusable="true">
+                    <ImageView android:id="@+id/ivFront" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@null" android:scaleType="centerCrop" android:visibility="gone" />
+                    <LinearLayout android:id="@+id/phFront" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="32dp" android:layout_height="32dp" android:contentDescription="@null" android:src="@drawable/ci_camera" app:tint="@color/primary" />
+                        <TextView style="@style/App.Text.Caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Tap to capture front" />
+                    </LinearLayout>
+                </FrameLayout>
+            <TextView style="@style/App.Text.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Back of Check" />
+                <FrameLayout android:id="@+id/boxBack" android:layout_width="match_parent" android:layout_height="140dp"
+                    android:layout_marginTop="8dp" android:background="@drawable/bg_upload_box" android:clickable="true" android:focusable="true">
+                    <ImageView android:id="@+id/ivBack" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@null" android:scaleType="centerCrop" android:visibility="gone" />
+                    <LinearLayout android:id="@+id/phBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="32dp" android:layout_height="32dp" android:contentDescription="@null" android:src="@drawable/ci_camera" app:tint="@color/primary" />
+                        <TextView style="@style/App.Text.Caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Tap to capture back" />
+                    </LinearLayout>
+                </FrameLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTo" style="@style/Widget.App.Input.Dropdown"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:hint="Deposit To">
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/acTo" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAmount" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="14dp" android:hint="Amount" app:prefixText="$ ">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAmount" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView android:id="@+id/tvLimit" style="@style/App.Text.Caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContinue" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" android:text="Continue" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

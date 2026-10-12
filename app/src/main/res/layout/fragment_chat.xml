@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background" android:orientation="vertical">
+    <include android:id="@+id/toolbar" layout="@layout/view_toolbar" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvChat" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false" android:paddingVertical="8dp" />
+    <TextView android:id="@+id/tvTyping" style="@style/App.Text.Caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="20dp" android:text="Support is typing…" android:visibility="gone" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/surface" android:gravity="center_vertical" android:orientation="horizontal" android:padding="8dp">
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Type a message…">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:imeOptions="actionSend" android:inputType="textCapSentences" android:maxLines="3" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageButton android:id="@+id/btnSend" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginStart="8dp" android:background="@drawable/bg_icon_circle" android:contentDescription="Send" android:src="@drawable/ci_send" app:tint="@color/primary" />
+    </LinearLayout>
+</LinearLayout>

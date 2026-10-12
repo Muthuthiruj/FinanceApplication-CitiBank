@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- This color will be overridden by android:backgroundTint in the layout,
+         but we provide a default light gray here. -->
+    <solid android:color="#E0E0E0" />
+
+    <!-- Corner radius to match modern UI patterns.
+         4dp to 8dp is standard for text-like placeholders. -->
+    <corners android:radius="30dp" />
+
+</shape>

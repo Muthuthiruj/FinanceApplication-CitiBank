@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <action
+        android:id="@+id/action_global_login"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.financeapplication.ui.auth.SplashFragment"
+        android:label="splashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splash_to_onboarding"
+            app:destination="@id/onboardingFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.example.financeapplication.ui.auth.OnboardingFragment"
+        android:label="onboardingFragment"
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/action_onboarding_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/onboardingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.financeapplication.ui.auth.LoginFragment"
+        android:label="loginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.financeapplication.ui.auth.SignUpFragment"
+        android:label="signUpFragment"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUp_to_terms"
+            app:destination="@id/termsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.example.financeapplication.ui.auth.OtpFragment"
+        android:label="otpFragment"
+        tools:layout="@layout/fragment_otp">
+        <action
+            android:id="@+id/action_otp_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.financeapplication.ui.auth.ForgotPasswordFragment"
+        android:label="forgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password" />
+
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.example.financeapplication.ui.auth.TermsFragment"
+        android:label="termsFragment"
+        tools:layout="@layout/fragment_legal">
+        <action
+            android:id="@+id/action_terms_to_privacy"
+            app:destination="@id/privacyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.example.financeapplication.ui.auth.PrivacyFragment"
+        android:label="privacyFragment"
+        tools:layout="@layout/fragment_legal">
+        <action
+            android:id="@+id/action_privacy_to_otp"
+            app:destination="@id/otpFragment" />
+        <argument android:name="readOnly" android:defaultValue="false" app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.financeapplication.ui.home.HomeFragment"
+        android:label="homeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/accountsFragment"
+        android:name="com.example.financeapplication.ui.accounts.AccountsFragment"
+        android:label="accountsFragment"
+        tools:layout="@layout/fragment_accounts" />
+
+    <fragment
+        android:id="@+id/accountDetailsFragment"
+        android:name="com.example.financeapplication.ui.accounts.AccountDetailsFragment"
+        android:label="accountDetailsFragment"
+        tools:layout="@layout/fragment_account_details">
+        <argument android:name="accountId" app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="com.example.financeapplication.ui.cards.CardFragment"
+        android:label="cardFragment"
+        tools:layout="@layout/fragment_card" />
+
+    <fragment
+        android:id="@+id/cardControlsFragment"
+        android:name="com.example.financeapplication.ui.cards.CardControlsFragment"
+        android:label="cardControlsFragment"
+        tools:layout="@layout/fragment_card_controls" />
+
+    <fragment
+        android:id="@+id/paymentsHubFragment"
+        android:name="com.example.financeapplication.ui.common.PaymentsHubFragment"
+        android:label="paymentsHubFragment"
+        tools:layout="@layout/fragment_menu" />
+
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.example.financeapplication.ui.common.MoreFragment"
+        android:label="moreFragment"
+        tools:layout="@layout/fragment_menu" />
+
+    <fragment
+        android:id="@+id/makePaymentFragment"
+        android:name="com.example.financeapplication.ui.payments.MakePaymentFragment"
+        android:label="makePaymentFragment"
+        tools:layout="@layout/fragment_make_payment" />
+
+    <fragment
+        android:id="@+id/billPayFragment"
+        android:name="com.example.financeapplication.ui.payments.BillPayFragment"
+        android:label="billPayFragment"
+        tools:layout="@layout/fragment_bill_pay" />
+
+    <fragment
+        android:id="@+id/transferFragment"
+        android:name="com.example.financeapplication.ui.payments.TransferFragment"
+        android:label="transferFragment"
+        tools:layout="@layout/fragment_transfer">
+        <argument android:name="fromAccountId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <argument android:name="payeeId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipientsFragment"
+        android:name="com.example.financeapplication.ui.payments.RecipientsFragment"
+        android:label="recipientsFragment"
+        tools:layout="@layout/fragment_recipients" />
+
+    <fragment
+        android:id="@+id/checkDepositFragment"
+        android:name="com.example.financeapplication.ui.payments.CheckDepositFragment"
+        android:label="checkDepositFragment"
+        tools:layout="@layout/fragment_check_deposit">
+        <argument android:name="toAccountId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.example.financeapplication.ui.payments.TransactionsFragment"
+        android:label="transactionsFragment"
+        tools:layout="@layout/fragment_transactions" />
+
+    <fragment
+        android:id="@+id/statementsFragment"
+        android:name="com.example.financeapplication.ui.payments.StatementsFragment"
+        android:label="statementsFragment"
+        tools:layout="@layout/fragment_statements" />
+
+    <fragment
+        android:id="@+id/rewardsFragment"
+        android:name="com.example.financeapplication.ui.rewards.RewardsFragment"
+        android:label="rewardsFragment"
+        tools:layout="@layout/fragment_rewards" />
+
+    <fragment
+        android:id="@+id/offersFragment"
+        android:name="com.example.financeapplication.ui.rewards.OffersFragment"
+        android:label="offersFragment"
+        tools:layout="@layout/fragment_offers" />
+
+    <fragment
+        android:id="@+id/loansFragment"
+        android:name="com.example.financeapplication.ui.rewards.LoansFragment"
+        android:label="loansFragment"
+        tools:layout="@layout/fragment_loans" />
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.financeapplication.ui.notifications.NotificationsFragment"
+        android:label="notificationsFragment"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.financeapplication.ui.profile.ProfileFragment"
+        android:label="profileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/securityFragment"
+        android:name="com.example.financeapplication.ui.profile.SecurityFragment"
+        android:label="securityFragment"
+        tools:layout="@layout/fragment_security" />
+
+    <fragment
+        android:id="@+id/locatorFragment"
+        android:name="com.example.financeapplication.ui.locator.LocatorFragment"
+        android:label="locatorFragment"
+        tools:layout="@layout/fragment_locator" />
+
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.financeapplication.ui.support.HelpFragment"
+        android:label="helpFragment"
+        tools:layout="@layout/fragment_help" />
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.financeapplication.ui.support.ChatFragment"
+        android:label="chatFragment"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.financeapplication.ui.settings.SettingsFragment"
+        android:label="settingsFragment"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

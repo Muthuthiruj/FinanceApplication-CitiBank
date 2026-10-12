@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#0B1220</color>
+    <color name="surface">#131C2E</color>
+    <color name="text_primary">#EAF0FF</color>
+    <color name="text_secondary">#9AA7C2</color>
+    <color name="divider">#25314A</color>
+    <color name="input_bg">#1A2438</color>
+    <color name="chip_bg">#1B2B52</color>
+</resources>
