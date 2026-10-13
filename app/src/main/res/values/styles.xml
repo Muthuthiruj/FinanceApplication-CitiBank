@@ -48,6 +48,7 @@
         <item name="boxStrokeColor">@color/primary</item>
         <item name="android:textColorHint">@color/text_secondary</item>
         <item name="hintTextColor">@color/primary</item>
+        <item name="android:textSize">14sp</item>
     </style>
     <style name="Widget.App.Input.Dropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
         <item name="boxCornerRadiusTopStart">12dp</item>
@@ -56,6 +57,7 @@
         <item name="boxCornerRadiusBottomEnd">12dp</item>
         <item name="boxStrokeColor">@color/primary</item>
         <item name="hintTextColor">@color/primary</item>
+        <item name="android:textSize">14sp</item>
     </style>
     <style name="Widget.App.Input.OnNavy" parent="Widget.App.Input">
         <item name="boxBackgroundMode">filled</item>
@@ -81,7 +83,7 @@
         <item name="android:fontFamily">@font/poppins_bold</item>
     </style>
     <style name="App.Text.Heading" parent="">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/text_primary</item>
         <item name="android:fontFamily">@font/poppins_bold</item>
     </style>

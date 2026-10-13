@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/background" android:orientation="vertical">
-    <include android:id="@+id/toolbar" layout="@layout/view_toolbar" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_toolbar" />
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilAccount" style="@style/Widget.App.Input.Dropdown"
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp" android:layout_marginBottom="8dp" android:hint="Account">
+        android:id="@+id/tilAccount"
+        style="@style/Widget.App.Input.Dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Account">
+
         <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/acAccount" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="none" />
+            android:id="@+id/acAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
-    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvList"
-        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
-        android:clipToPadding="false" android:paddingBottom="12dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="12dp" />
 </LinearLayout>

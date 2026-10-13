@@ -1,44 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/background" android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
 
-    <include android:id="@+id/toolbar" layout="@layout/view_toolbar" />
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_toolbar" />
 
-    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilFrom" style="@style/Widget.App.Input.Dropdown"
-                android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="0dp" android:hint="From">
+                android:id="@+id/tilFrom"
+                style="@style/Widget.App.Input.Dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:hint="From">
+
                 <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                    android:id="@+id/acFrom" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="none" />
+                    android:id="@+id/acFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
             </com.google.android.material.textfield.TextInputLayout>
-            <TextView android:id="@+id/tvAvailable" style="@style/App.Text.Caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" />
+
+            <TextView
+                android:id="@+id/tvAvailable"
+                style="@style/App.Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" />
+
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilTo" style="@style/Widget.App.Input.Dropdown"
-                android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="14dp" android:hint="To">
+                android:id="@+id/tilTo"
+                style="@style/Widget.App.Input.Dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="To">
+
                 <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                    android:id="@+id/acTo" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="none" />
+                    android:id="@+id/acTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilAmount" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="14dp" android:hint="Amount" app:prefixText="$ ">
+                android:id="@+id/tilAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="Amount"
+                app:prefixText="$ ">
+
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etAmount" android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" android:singleLine="true" />
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilNote" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="14dp" android:hint="Note (optional)">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etNote" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:id="@+id/etAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
                     android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="Note (optional)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnTransfer" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="24dp" android:text="Transfer" />
+                android:id="@+id/btnTransfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Transfer" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

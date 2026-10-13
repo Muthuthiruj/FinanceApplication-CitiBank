@@ -1,12 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/background" android:orientation="vertical">
-    <include android:id="@+id/toolbar" layout="@layout/view_toolbar" />
-    <com.google.android.material.button.MaterialButtonToggleGroup android:id="@+id/segments" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="20dp" android:layout_marginVertical="8dp" app:checkedButton="@id/btnAtms" app:selectionRequired="true" app:singleSelection="true">
-        <com.google.android.material.button.MaterialButton android:id="@+id/btnAtms" style="@style/Widget.App.Segment" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="ATMs" />
-        <com.google.android.material.button.MaterialButton android:id="@+id/btnBranches" style="@style/Widget.App.Segment" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Branches" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_toolbar" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/segments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="8dp"
+        app:checkedButton="@id/btnAtms"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAtms"
+            style="@style/Widget.App.Segment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ATMs" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBranches"
+            style="@style/Widget.App.Segment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Branches" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
-    <com.example.financeapplication.ui.locator.MiniMapView android:id="@+id/map" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginHorizontal="20dp" />
-    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvList" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="8dp" android:clipToPadding="false" android:paddingBottom="12dp" />
+
+    <com.example.financeapplication.ui.locator.MiniMapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="12dp" />
 </LinearLayout>

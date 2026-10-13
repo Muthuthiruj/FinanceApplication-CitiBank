@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="56dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center_vertical"
     android:orientation="horizontal"
     android:paddingHorizontal="8dp">
@@ -13,8 +15,7 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="Back"
         android:src="@drawable/ci_back"
-        app:tint="@color/text_primary"
-        xmlns:app="http://schemas.android.com/apk/res-auto" />
+        app:tint="@color/text_primary" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -33,8 +34,7 @@
         android:layout_height="44dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="Action"
-        android:visibility="gone"
         android:src="@drawable/ci_more"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:visibility="gone"
         app:tint="@color/text_primary" />
 </LinearLayout>

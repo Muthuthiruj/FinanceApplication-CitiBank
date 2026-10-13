@@ -35,7 +35,7 @@
             android:textSize="14sp" />
     </LinearLayout>
 
-    <com.google.android.material.progressindicator.CircularProgressIndicator
+    <com.google.android.material.progressindicator.CircularProgressIndicator xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
@@ -43,6 +43,5 @@
         android:indeterminate="true"
         app:indicatorColor="@color/white"
         app:indicatorSize="28dp"
-        app:trackThickness="3dp"
-        xmlns:app="http://schemas.android.com/apk/res-auto" />
+        app:trackThickness="3dp" />
 </FrameLayout>
